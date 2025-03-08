@@ -11,7 +11,7 @@ export const Greetings = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/api/greet?name=${name}`);
+            const response = await fetch(`https://greetingapp-3.onrender.com/api/greet?name=${name}`);
             const data = await response.json();
             setMessage(data.message || <span className="text-red-600">{data.error}</span>);
         } catch (error) {
